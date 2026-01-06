@@ -6,7 +6,7 @@ import 'package:bikes_rental_app/features/home/presentation/views/map2_view.dart
 import 'package:bikes_rental_app/features/home/presentation/views/map3_view.dart';
 import 'package:bikes_rental_app/features/home/presentation/views/map_view.dart';
 import 'package:bikes_rental_app/features/home/presentation/views/search_view.dart';
-import 'package:bikes_rental_app/features/home/presentation/views/widgets/drawer.dart';
+import 'package:bikes_rental_app/features/home/presentation/views/widgets/drawer_widget.dart';
 import 'package:bikes_rental_app/features/onboarding/presentation/views/onboarding1_view.dart';
 import 'package:bikes_rental_app/features/onboarding/presentation/views/onboarding2_view.dart';
 import 'package:bikes_rental_app/features/onboarding/presentation/views/onboarding3_view.dart';
@@ -69,8 +69,8 @@ abstract class AppRouter {
         builder: (context, state) => Map3View(),
       ),
       GoRoute(
-        path: '/AppDrawer',
-        builder: (context, state) => AppDrawer(),
+        path: '/DrawerWidget',
+        builder: (context, state) => DrawerWidget(),
       ),
     ],
   );

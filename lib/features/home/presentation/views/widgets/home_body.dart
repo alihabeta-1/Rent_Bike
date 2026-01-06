@@ -1,21 +1,34 @@
 import 'package:bikes_rental_app/core/utils/styles.dart';
 import 'package:bikes_rental_app/features/home/presentation/views/widgets/bikes_list_view_item.dart';
+import 'package:bikes_rental_app/features/home/presentation/views/widgets/drawer_widget.dart';
 import 'package:bikes_rental_app/features/home/presentation/views/widgets/profile_avatar.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class HomeBody extends StatelessWidget {
+class HomeBody extends StatefulWidget {
   const HomeBody({super.key});
 
+  @override
+  State<HomeBody> createState() => _HomeBodyState();
+}
+
+class _HomeBodyState extends State<HomeBody> {
+  final GlobalKey<ScaffoldState> _scaffoldKey =
+      GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
-      extendBodyBehindAppBar: true, // ← أهم حاجة
+      extendBodyBehindAppBar: true,
+
+      key: _scaffoldKey,
+
+      drawer: const DrawerWidget(),
+
+      drawerScrimColor: Colors.black.withOpacity(0.5),
 
       body: Stack(
         children: [
-          /// Background
           Positioned.fill(
             child: Image.asset(
               'assets/images/Background.png',
@@ -23,7 +36,6 @@ class HomeBody extends StatelessWidget {
             ),
           ),
 
-          /// Content
           SingleChildScrollView(
             child: ConstrainedBox(
               constraints: BoxConstraints(
@@ -41,12 +53,17 @@ class HomeBody extends StatelessWidget {
                   crossAxisAlignment:
                       CrossAxisAlignment.start,
                   children: [
-                    /// Profile Row
                     Row(
                       children: [
-                        ProfileAvatar(
-                          width: 99,
-                          height: 99,
+                        GestureDetector(
+                          onTap: () {
+                            _scaffoldKey.currentState!
+                                .openDrawer();
+                          },
+                          child: const ProfileAvatar(
+                            width: 99,
+                            height: 99,
+                          ),
                         ),
                         Spacer(),
                         IconButton(
@@ -66,7 +83,6 @@ class HomeBody extends StatelessWidget {
 
                     SizedBox(height: 8),
 
-                    /// Greeting
                     Padding(
                       padding: const EdgeInsets.only(
                         left: 8.0,
@@ -206,8 +222,6 @@ class HomeBody extends StatelessWidget {
                     ),
 
                     SizedBox(height: 40),
-
-                    /// Near You Header
                     Row(
                       children: [
                         Text(
@@ -243,8 +257,6 @@ class HomeBody extends StatelessWidget {
                     ),
 
                     SizedBox(height: 16),
-
-                    /// Horizontal List
                     SizedBox(
                       height: 324,
                       child: ListView.builder(
