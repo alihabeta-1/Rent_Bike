@@ -68,10 +68,6 @@ abstract class AppRouter {
         path: '/Map3View',
         builder: (context, state) => Map3View(),
       ),
-      GoRoute(
-        path: '/DrawerWidget',
-        builder: (context, state) => DrawerWidget(),
-      ),
     ],
   );
 }
