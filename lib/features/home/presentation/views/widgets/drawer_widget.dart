@@ -1,6 +1,7 @@
 import 'package:bikes_rental_app/core/utils/styles.dart';
 import 'package:bikes_rental_app/features/home/presentation/views/widgets/profile_avatar.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class DrawerWidget extends StatelessWidget {
   const DrawerWidget({super.key});
@@ -56,25 +57,34 @@ class DrawerWidget extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(
-                  height: 50,
-                  child: Row(
-                    children: [
-                      Text(
-                        'My Wallet',
-                        style: Styles.textStyle21.copyWith(
-                          color: Color(0xff3D003E),
+                GestureDetector(
+                  onTap: () {
+                    GoRouter.of(
+                      context,
+                    ).push('/MyWalletView');
+                  },
+                  child: SizedBox(
+                    height: 50,
+                    child: Row(
+                      children: [
+                        Text(
+                          'My Wallet',
+                          style: Styles.textStyle21
+                              .copyWith(
+                                color: Color(0xff3D003E),
+                              ),
                         ),
-                      ),
-                      Spacer(),
-                      Text(
-                        '\$ 10.50',
-                        style: Styles.textStyle21.copyWith(
-                          color: Color(0xff3D003E),
-                          fontWeight: FontWeight.w600,
+                        Spacer(),
+                        Text(
+                          '\$ 10.50',
+                          style: Styles.textStyle21
+                              .copyWith(
+                                color: Color(0xff3D003E),
+                                fontWeight: FontWeight.w600,
+                              ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
                 Divider(),
