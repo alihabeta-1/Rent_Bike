@@ -10,7 +10,10 @@ import 'package:bikes_rental_app/features/onboarding/presentation/views/onboardi
 import 'package:bikes_rental_app/features/onboarding/presentation/views/onboarding2_view.dart';
 import 'package:bikes_rental_app/features/onboarding/presentation/views/onboarding3_view.dart';
 import 'package:bikes_rental_app/features/payments/presentation/views/my_wallet_view.dart';
+import 'package:bikes_rental_app/features/payments/presentation/views/payment_options.dart';
+import 'package:bikes_rental_app/features/payments/presentation/views/payment_view.dart';
 import 'package:bikes_rental_app/features/payments/presentation/views/top_up_view.dart';
+import 'package:bikes_rental_app/features/payments/presentation/views/widgets/payment_options_body.dart';
 import 'package:bikes_rental_app/features/splash/presentation/views/splash_view.dart';
 import 'package:go_router/go_router.dart';
 
@@ -76,6 +79,14 @@ abstract class AppRouter {
       GoRoute(
         path: '/TopUpView',
         builder: (context, state) => TopUpView(),
+      ),
+      GoRoute(
+        path: '/PaymentView',
+        builder: (context, state) => PaymentView(),
+      ),
+      GoRoute(
+        path: '/PaymentOptions',
+        builder: (context, state) => PaymentOptions(),
       ),
     ],
   );

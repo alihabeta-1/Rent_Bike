@@ -118,34 +118,44 @@ class MyWalletBody extends StatelessWidget {
                   ),
                   Spacer(),
                   GestureDetector(
-                    child: Container(
-                      height: 40,
-                      width: 114,
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(
-                          20,
-                        ),
-                        border: Border.all(
-                          color: Colors.grey,
-                          width: 0.5,
-                        ),
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                        right: 24,
                       ),
-                      child: Text(
-                        'Top Up',
-                        style: Styles.textStyle15.copyWith(
-                          color: const Color(0xff3D003E),
-                          fontWeight: FontWeight.w600,
+                      child: Container(
+                        height: 40,
+                        width: 114,
+                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                          borderRadius:
+                              BorderRadius.circular(20),
+                          border: Border.all(
+                            color: Colors.grey,
+                            width: 0.5,
+                          ),
+                        ),
+                        child: Text(
+                          'Top Up',
+                          style: Styles.textStyle15
+                              .copyWith(
+                                color: const Color(
+                                  0xff3D003E,
+                                ),
+                                fontWeight: FontWeight.w600,
+                              ),
                         ),
                       ),
                     ),
                   ),
                 ],
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 10),
               Divider(),
               SizedBox(height: 10),
               GestureDetector(
+                onTap: () {
+                  GoRouter.of(context).push('/PaymentView');
+                },
                 child: Row(
                   children: [
                     Text(
