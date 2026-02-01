@@ -13,7 +13,6 @@ import 'package:bikes_rental_app/features/payments/presentation/views/my_wallet_
 import 'package:bikes_rental_app/features/payments/presentation/views/payment_options.dart';
 import 'package:bikes_rental_app/features/payments/presentation/views/payment_view.dart';
 import 'package:bikes_rental_app/features/payments/presentation/views/top_up_view.dart';
-import 'package:bikes_rental_app/features/payments/presentation/views/widgets/payment_options_body.dart';
 import 'package:bikes_rental_app/features/splash/presentation/views/splash_view.dart';
 import 'package:go_router/go_router.dart';
 

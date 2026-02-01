@@ -37,9 +37,7 @@ class SplashBody extends StatelessWidget {
                 text: 'Get Started',
                 style: Styles.textStyle21.copyWith(),
                 onPressed: () {
-                  GoRouter.of(
-                    context,
-                  ).push('/Onboarding1View');
+                  GoRouter.of(context).push('/PaymentView');
                 },
               ),
               const SizedBox(height: 20),

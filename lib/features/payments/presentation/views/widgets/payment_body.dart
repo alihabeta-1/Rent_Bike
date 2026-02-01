@@ -1,4 +1,5 @@
 import 'package:bikes_rental_app/core/utils/styles.dart';
+import 'package:bikes_rental_app/features/payments/presentation/views/widgets/paymentoptionsbottomsheet.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -113,9 +114,16 @@ class PaymentBody extends StatelessWidget {
               SizedBox(height: 10),
               GestureDetector(
                 onTap: () {
-                  GoRouter.of(
-                    context,
-                  ).push('/PaymentOptions');
+                  showModalBottomSheet(
+                    context: context,
+                    isScrollControlled: true,
+                    backgroundColor: Colors.transparent,
+                    barrierColor: Colors.black.withOpacity(
+                      0.8,
+                    ),
+                    builder: (_) =>
+                        const PaymentOptionsBottomSheet(),
+                  );
                 },
                 child: Row(
                   children: [
