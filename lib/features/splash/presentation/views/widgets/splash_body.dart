@@ -35,10 +35,12 @@ class SplashBody extends StatelessWidget {
                 backgroundColor: Colors.white,
                 textColor: Color(0xff3D003E),
                 text: 'Get Started',
-                style: Styles.textStyle21.copyWith(),
                 onPressed: () {
-                  GoRouter.of(context).push('/PaymentView');
+                  GoRouter.of(
+                    context,
+                  ).push('/Onboarding1View');
                 },
+                fontSize: 21,
               ),
               const SizedBox(height: 20),
               Row(

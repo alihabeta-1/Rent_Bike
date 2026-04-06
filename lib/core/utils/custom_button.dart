@@ -1,6 +1,3 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
-// ignore_for_file: file_names
-
 import 'package:flutter/material.dart';
 import 'styles.dart';
 
@@ -13,7 +10,7 @@ class CustomButton extends StatelessWidget {
     this.borderRadius,
     this.fontSize,
     this.onPressed,
-    required TextStyle style,
+    this.style,
     required this.height,
     required this.width,
   });
@@ -25,6 +22,7 @@ class CustomButton extends StatelessWidget {
   final void Function()? onPressed;
   final double height;
   final double width;
+  final TextStyle? style;
 
   @override
   Widget build(BuildContext context) {

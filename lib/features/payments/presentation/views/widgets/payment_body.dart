@@ -58,7 +58,6 @@ class PaymentBody extends StatelessWidget {
               topLeft: Radius.circular(50),
             ),
           ),
-          child: Column(),
         ),
         Positioned(
           top: 110,

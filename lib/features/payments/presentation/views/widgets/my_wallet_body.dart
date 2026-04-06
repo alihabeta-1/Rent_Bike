@@ -118,6 +118,11 @@ class MyWalletBody extends StatelessWidget {
                   ),
                   Spacer(),
                   GestureDetector(
+                    onTap: () {
+                      GoRouter.of(
+                        context,
+                      ).push('/TopUpView');
+                    },
                     child: Padding(
                       padding: const EdgeInsets.only(
                         right: 24,

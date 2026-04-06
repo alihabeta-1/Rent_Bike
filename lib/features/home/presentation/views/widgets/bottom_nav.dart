@@ -61,7 +61,6 @@ class BottomNav extends StatelessWidget {
     );
   }
 
-  /// ========= ICON WIDGET =========
   Widget _bottomIcon({
     required int index,
     required String path,

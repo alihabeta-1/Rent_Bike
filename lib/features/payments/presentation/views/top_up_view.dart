@@ -1,3 +1,4 @@
+import 'package:bikes_rental_app/features/payments/presentation/views/widgets/top_up_body.dart';
 import 'package:flutter/material.dart';
 
 class TopUpView extends StatelessWidget {
@@ -5,6 +6,6 @@ class TopUpView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const TopUpBody();
   }
 }
