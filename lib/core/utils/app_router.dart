@@ -13,6 +13,10 @@ import 'package:bikes_rental_app/features/payments/presentation/views/my_wallet_
 import 'package:bikes_rental_app/features/payments/presentation/views/payment_options.dart';
 import 'package:bikes_rental_app/features/payments/presentation/views/payment_view.dart';
 import 'package:bikes_rental_app/features/payments/presentation/views/top_up_view.dart';
+import 'package:bikes_rental_app/features/profile_options/views/invite_friends_view.dart';
+import 'package:bikes_rental_app/features/profile_options/views/mystatistics_view.dart';
+import 'package:bikes_rental_app/features/profile_options/views/settings_view.dart';
+import 'package:bikes_rental_app/features/profile_options/views/support_view.dart';
 import 'package:bikes_rental_app/features/splash/presentation/views/splash_view.dart';
 import 'package:go_router/go_router.dart';
 
@@ -86,6 +90,22 @@ abstract class AppRouter {
       GoRoute(
         path: '/PaymentOptions',
         builder: (context, state) => PaymentOptions(),
+      ),
+      GoRoute(
+        path: '/MystatisticsView',
+        builder: (context, state) => MystatisticsView(),
+      ),
+      GoRoute(
+        path: '/InviteFriendsView',
+        builder: (context, state) => InviteFriendsView(),
+      ),
+      GoRoute(
+        path: '/SupportView',
+        builder: (context, state) => SupportView(),
+      ),
+      GoRoute(
+        path: '/SettingsView',
+        builder: (context, state) => SettingsView(),
       ),
     ],
   );

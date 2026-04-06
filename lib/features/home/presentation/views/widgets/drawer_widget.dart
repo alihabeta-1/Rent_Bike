@@ -88,53 +88,81 @@ class DrawerWidget extends StatelessWidget {
                   ),
                 ),
                 Divider(),
-                SizedBox(
-                  height: 50,
-                  child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      'My Statistics',
-                      style: Styles.textStyle21.copyWith(
-                        color: const Color(0xff3D003E),
+                GestureDetector(
+                  onTap: () {
+                    GoRouter.of(
+                      context,
+                    ).push('/MystatisticsView');
+                  },
+                  child: SizedBox(
+                    height: 50,
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        'My Statistics',
+                        style: Styles.textStyle21.copyWith(
+                          color: const Color(0xff3D003E),
+                        ),
                       ),
                     ),
                   ),
                 ),
                 Divider(),
-                SizedBox(
-                  height: 50,
-                  child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      'Invite Friends',
-                      style: Styles.textStyle21.copyWith(
-                        color: const Color(0xff3D003E),
+                GestureDetector(
+                  onTap: () {
+                    GoRouter.of(
+                      context,
+                    ).push('/InviteFriendsView');
+                  },
+                  child: SizedBox(
+                    height: 50,
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        'Invite Friends',
+                        style: Styles.textStyle21.copyWith(
+                          color: const Color(0xff3D003E),
+                        ),
                       ),
                     ),
                   ),
                 ),
                 Divider(),
-                SizedBox(
-                  height: 50,
-                  child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      'Support',
-                      style: Styles.textStyle21.copyWith(
-                        color: const Color(0xff3D003E),
+                GestureDetector(
+                  onTap: () {
+                    GoRouter.of(
+                      context,
+                    ).push('/SupportView');
+                  },
+                  child: SizedBox(
+                    height: 50,
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        'Support',
+                        style: Styles.textStyle21.copyWith(
+                          color: const Color(0xff3D003E),
+                        ),
                       ),
                     ),
                   ),
                 ),
                 Divider(),
-                SizedBox(
-                  height: 50,
-                  child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      'Settings',
-                      style: Styles.textStyle21.copyWith(
-                        color: const Color(0xff3D003E),
+                GestureDetector(
+                  onTap: () {
+                    GoRouter.of(
+                      context,
+                    ).push('/SettingsView');
+                  },
+                  child: SizedBox(
+                    height: 50,
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        'Settings',
+                        style: Styles.textStyle21.copyWith(
+                          color: const Color(0xff3D003E),
+                        ),
                       ),
                     ),
                   ),
@@ -149,10 +177,15 @@ class DrawerWidget extends StatelessWidget {
                       color: Color(0xff3D003E),
                     ),
                     SizedBox(width: 20),
-                    Text(
-                      'Log Out',
-                      style: Styles.textStyle21.copyWith(
-                        color: Color(0xff3D003E),
+                    GestureDetector(
+                      onTap: () {
+                        context.go('/LoginPage');
+                      },
+                      child: Text(
+                        'Log Out',
+                        style: Styles.textStyle21.copyWith(
+                          color: Color(0xff3D003E),
+                        ),
                       ),
                     ),
                   ],
