@@ -57,7 +57,122 @@ class MyWalletBody extends StatelessWidget {
               topLeft: Radius.circular(50),
             ),
           ),
-          child: Column(),
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(
+                  top: 160,
+                  left: 16,
+                  right: 16,
+                ),
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Column(
+                          children: [
+                            Text(
+                              'Balance',
+                              style: Styles.textStyle21
+                                  .copyWith(
+                                    color: Color(
+                                      0xff3D003E,
+                                    ),
+                                    fontWeight:
+                                        FontWeight.normal,
+                                  ),
+                            ),
+                            SizedBox(height: 5),
+                            Text(
+                              '\$ 10.50',
+                              style: Styles.textStyle21
+                                  .copyWith(
+                                    color: Color(
+                                      0xff3D003E,
+                                    ),
+                                    fontWeight:
+                                        FontWeight.w600,
+                                  ),
+                            ),
+                          ],
+                        ),
+                        Spacer(),
+                        GestureDetector(
+                          onTap: () {
+                            GoRouter.of(
+                              context,
+                            ).push('/TopUpView');
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.only(
+                              right: 24,
+                            ),
+                            child: Container(
+                              height: 40,
+                              width: 114,
+                              alignment: Alignment.center,
+                              decoration: BoxDecoration(
+                                borderRadius:
+                                    BorderRadius.circular(
+                                      20,
+                                    ),
+                                border: Border.all(
+                                  color: Colors.grey,
+                                  width: 0.5,
+                                ),
+                              ),
+                              child: Text(
+                                'Top Up',
+                                style: Styles.textStyle15
+                                    .copyWith(
+                                      color: const Color(
+                                        0xff3D003E,
+                                      ),
+                                      fontWeight:
+                                          FontWeight.w600,
+                                    ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 10),
+                    Divider(),
+                    SizedBox(height: 10),
+                    GestureDetector(
+                      onTap: () {
+                        GoRouter.of(
+                          context,
+                        ).push('/PaymentView');
+                      },
+                      child: Row(
+                        children: [
+                          Text(
+                            'Payment',
+                            style: Styles.textStyle21
+                                .copyWith(
+                                  color: Color(0xff3D003E),
+                                  fontWeight:
+                                      FontWeight.normal,
+                                ),
+                          ),
+                          Spacer(),
+                          Icon(
+                            Icons.arrow_forward_ios,
+                            size: 15,
+                            color: Colors.grey,
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    Divider(),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
         Positioned(
           top: 160,
@@ -85,103 +200,6 @@ class MyWalletBody extends StatelessWidget {
               color: Color(0xff3D003E),
               fontWeight: FontWeight.w600,
             ),
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(
-            top: 430,
-            left: 32,
-            right: 32,
-          ),
-          child: Column(
-            children: [
-              Row(
-                children: [
-                  Column(
-                    children: [
-                      Text(
-                        'Balance',
-                        style: Styles.textStyle21.copyWith(
-                          color: Color(0xff3D003E),
-                          fontWeight: FontWeight.normal,
-                        ),
-                      ),
-                      SizedBox(height: 5),
-                      Text(
-                        '\$ 10.50',
-                        style: Styles.textStyle21.copyWith(
-                          color: Color(0xff3D003E),
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
-                    ],
-                  ),
-                  Spacer(),
-                  GestureDetector(
-                    onTap: () {
-                      GoRouter.of(
-                        context,
-                      ).push('/TopUpView');
-                    },
-                    child: Padding(
-                      padding: const EdgeInsets.only(
-                        right: 24,
-                      ),
-                      child: Container(
-                        height: 40,
-                        width: 114,
-                        alignment: Alignment.center,
-                        decoration: BoxDecoration(
-                          borderRadius:
-                              BorderRadius.circular(20),
-                          border: Border.all(
-                            color: Colors.grey,
-                            width: 0.5,
-                          ),
-                        ),
-                        child: Text(
-                          'Top Up',
-                          style: Styles.textStyle15
-                              .copyWith(
-                                color: const Color(
-                                  0xff3D003E,
-                                ),
-                                fontWeight: FontWeight.w600,
-                              ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(height: 10),
-              Divider(),
-              SizedBox(height: 10),
-              GestureDetector(
-                onTap: () {
-                  GoRouter.of(context).push('/PaymentView');
-                },
-                child: Row(
-                  children: [
-                    Text(
-                      'Payment',
-                      style: Styles.textStyle21.copyWith(
-                        color: Color(0xff3D003E),
-                        fontWeight: FontWeight.normal,
-                      ),
-                    ),
-                    Spacer(),
-                    Icon(
-                      Icons.arrow_forward_ios,
-                      size: 15,
-                      color: Colors.grey,
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(height: 10),
-              Divider(),
-            ],
           ),
         ),
       ],
